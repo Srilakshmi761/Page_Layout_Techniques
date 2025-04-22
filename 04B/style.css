@@ -1,0 +1,179 @@
+/* styles.css */
+body {
+    background-color: lightblue;
+    padding: 20px;
+    margin: 10px;
+
+  }
+  
+  h1 {
+    color: navy;
+  }
+  p { color: rgb(10, 10, 10); }
+  h3 { color: rgb(155, 8, 8); }
+  h2 { color: rgb(155, 8, 8); }
+  h1 { font-size: 3em; }
+  h2 { font-size: 2em; }
+  h3 { font-size: 2em;}
+  p { font-size: 1.5em;}
+ 
+  li { font-size: 1.5em; }
+  div {
+    padding: 20px; /* Adds 20px padding on all sides of the div */
+    background-color: rgb(219, 134, 208); /* Just to make it visible */
+    border: 2px solid black; /* Adds a border around the div */
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+  }
+  th, td {
+    border: 1px solid #add;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: rgba(228, 99, 217, 0.793);
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  label { font-weight: bold;}
+
+input[type="text"] 
+{
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 50%;
+
+}
+input[type="email"]
+{
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 50%;
+}
+
+input[type="submit"]{
+    background-color: rgb(183, 55, 20); 
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 25%;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green */
+  }
+  
+  .transition-button {
+    background-color: rgb(125, 58, 225);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .transition-button:hover {
+    background-color: lightcoral;
+  }
+  .animation-box {
+    width: 40px;
+    height: 20px;
+    background-color: rgb(219, 134, 208);
+    position: relative;
+    animation: move 2s infinite alternate;
+  }
+  
+  @keyframes move {
+    from {
+      left: 0;
+    }
+    to {
+      left: 300px;
+    }
+  }
+  .pseudo-list li:nth-child(odd) {
+    background-color: rgb(219, 134, 208);
+  }
+  
+  .pseudo-list li:nth-child(even) {
+    background-color: rgb(250, 182, 241);
+  }
+  .quote {
+    position: relative;
+    padding-left: 20px;
+    font-style: italic;
+    gap: 20px
+  }
+  
+  .quote::before {
+    content: '“';
+    font-size: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: rgba(13, 1, 1, 0.89);
+    
+    font-weight: bold;
+  }
+  .flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 1em;
+    column-gap: 1em;
+    gap: 20px
+  }
+  
+  .box {
+    background-color: rgb(227, 164, 218);
+    padding: 20px;
+    text-align: center;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    gap: 20px
+  }
+  
+  .grid-item {
+    background-color: rgb(235, 184, 229);
+    padding:  20px;
+    width: 150px;
+    height: 150px;
+  }
+  .grid-item img {
+    width: 100%;
+    height: auto;}
+
+  .responsive-box {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  @media (max-width:700px) {
+    .responsive-box {
+      background-color: lightcoral;
+    }
+  }
+  
+  @media (min-width: 701px) {
+    .responsive-box {
+      background-color: lightseagreen;
+    }
+  }
+  @media all and (max-width: 700px) {
+    body {
+      background-color: lightyellow;
+    }
+    
+  }
